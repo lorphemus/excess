@@ -95,9 +95,9 @@
 							<nav id="mobile-menu-right">
 								<ul>
 									<li>
-										<a href="#">Anasayfa</a>
+										<a href="index.php">Anasayfa</a>
 									</li>
-									<li><a href="page-about.html">Hakkımızda</a></li>
+									<li><a href="about.php">Hakkımızda</a></li>
 									<li class="has-sub">
 										<a href="#">Hizmetlerimiz</a>
 										<ul class="sub-menu">
