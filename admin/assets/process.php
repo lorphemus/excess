@@ -81,4 +81,77 @@ if(isset($_POST['repass'])){
 		}
 	}
 }
+
+/* Renew Password */
+if(isset($_POST['newpass'])){
+	$token = $_POST['user_token'];
+	if($_POST['pass']!== $_POST['pass_control']){
+		header("Location:../newpass.php?token=$token&status=notequal");
+	}else{
+	$query=$db->prepare("UPDATE users SET
+	user_pass=:pass,
+	user_token=:token WHERE user_id={$_POST['user_id']}");
+	$update=$query->execute(array(
+	'pass'=>sha1(md5($_POST['pass_control'])),
+	'token'=>md5(uniqid())
+	));
+
+	if($update){
+		header('Location:../login.php?status=passchanged');
+	}else{
+		header('Location:../login.php?status=passchangefail');
+	}
+	}
+}
+
+/* Profile Picture Update */
+if(isset($_POST['picupdate'])){
+	$allowed_ext=array("jpg","png","gif");
+	$ext=strtolower(substr($_FILES['user_pic']['name'],strpos($_FILES['user_pic']['name'],'.')+1));
+	if(in_array($ext, $allowed_ext)===false){
+		$_SESSION['title'] = "Hata!";
+		$_SESSION['status'] = "Sadece JPG, PNG ve GIF formatı yükleyebilirsiniz.";
+		$_SESSION['icon'] = "error";
+		header('Location:../profilesetup.php');
+		exit();
+	}
+
+	if($_FILES['user_pic']['size']>1048576){
+		$_SESSION['title'] = "Hata!";
+		$_SESSION['status'] = "Yüklemeye çalıştığınız resim en fazla 1mb. boyutunda olmalıdır.";
+		$_SESSION['icon'] = "error";
+		header('Location:../profilesetup.php');
+		exit();
+	}
+
+		$uploads_dir='../img';
+		@$tmp_name=$_FILES['user_pic']["tmp_name"];
+		@$name=$_FILES['user_pic']["name"];
+		$benzersizsayi1=rand(20000,32000);
+		$benzersizsayi2=rand(20000,32000);
+		$benzersizad=$benzersizsayi1.$benzersizsayi2;
+		$refimgyol=substr($uploads_dir,3)."/".$benzersizad.$name;
+		@move_uploaded_file($tmp_name,"$uploads_dir/$benzersizad$name");
+
+		$update_prof=$db->prepare("UPDATE users SET
+		user_pic=:pic
+		WHERE user_id={$_POST['user_id']}");
+
+		$update=$update_prof->execute(array(
+		'pic'    =>$refimgyol));
+
+		if($update){
+			$unlink=$_POST['unlink'];
+			$_SESSION['title'] = "İşlem Başarılı";
+			$_SESSION['status'] = "Profil resmi başarıyla güncellenmiştir.";
+			$_SESSION['icon'] = "success";
+			unlink("../$unlink");
+			header("Location:../profilesetup.php");
+		}else{
+			$_SESSION['title'] = "Hata!";
+			$_SESSION['status'] = "Profil resmi güncellenirken bir hata oluştu.";
+			$_SESSION['icon'] = "error";
+			header("Location:../profilesetup.php");
+		}
+}
 ?>
