@@ -187,13 +187,17 @@ if(isset($_POST['add_slider'])){
 
 		$add_image=$db->prepare("INSERT INTO slider SET
 		title_tr=:title_tr,
-		title_en=:title_en
+		title_en=:title_en,
+		text_tr=:text_tr,
+		text_en=:text_en,
 		pic_url=:pic");
 
 		$add_service=$add_image->execute(array(
-		"title_tr"  => trim($_POST["title_tr"]),
-		"title_en"  => trim($_POST["title_en"]),
-		'pic'    => $refimgyol));
+		"title_tr" => trim($_POST["title_tr"]),
+		"title_en" => trim($_POST["title_en"]),
+		"text_tr"  => trim($_POST["text_tr"]),
+		"text_en"  => trim($_POST["text_en"]),
+		'pic'      => $refimgyol));
 
 		if($add_service){
 			$_SESSION['title'] = "İşlem Başarılı";
@@ -302,6 +306,16 @@ if(isset($_POST['edit_slider'])){
 		$_SESSION['status'] = "Hizmet güncellenirken bir hata oluştu. Daha sonra tekrar deneyin veya info@excess.web.tr adresine bildirin.";
 		$_SESSION['icon'] = "error";
 		header("Location:../edit-slider.php?id=$slider_id");
+	}
+}
+
+/* Delete Slider */
+if(isset($_POST["delete_slider"])){
+	$delete_qry=$db->prepare("DELETE FROM slider WHERE id=:id");
+	$delete_slider=$delete_qry->execute(array('id'=>$_POST['delete_id']));
+	if($delete_slider){
+		$unlink=$_POST["unlink"];
+		unlink("../../$unlink");
 	}
 }
 ?>
