@@ -1,4 +1,5 @@
 <?php 
+include("admin/assets/connect.php");
 include("admin/assets/functions.php");
 ?>
 <!DOCTYPE html>
@@ -20,14 +21,20 @@ include("admin/assets/functions.php");
 	<!-- Home Slider Start -->
 	<section class="banner-section">
 		<div class="home-carousel owl-theme owl-carousel">
+			<?php 
+			$query=$db->prepare("SELECT * FROM slider ORDER BY slider_rank ASC");
+			$query->execute();
+			$sliders=$query->fetchALL();
+			foreach($sliders as $slider){
+			?>
 			<div class="slide-item">
-				<div class="image-layer" data-background="images/bg/1.jpg"></div>
+				<div class="image-layer" data-background="<?php echo $slider["pic_url"]; ?>"></div>
 				<div class="auto-container">
 					<div class="row clearfix">
 						<div class="col-xl-8 col-lg-12 col-md-12 content-column">
 							<div class="content-box">
-								<h1>Make a Good Plan & <br> Grow Your Business</h1>
-								<p>We have almost 35+ years of experience for <br>providing consulting services solutions</p>
+								<h1><?php echo $slider["title_tr"]; ?></h1>
+								<p><?php echo $slider["text_tr"]; ?></p>
 								<div class="btn-box">
 									<a href="#" class="cs-btn-one btn-gradient-color">Get a Quote</a>
 								</div>
@@ -36,38 +43,7 @@ include("admin/assets/functions.php");
 					</div>
 				</div>
 			</div>
-			<div class="slide-item">
-				<div class="image-layer" data-background="images/bg/2.jpg"></div>
-				<div class="auto-container">
-					<div class="row clearfix">
-						<div class="col-xl-8 col-lg-12 col-md-12 content-column">
-							<div class="content-box">
-								<h1>Make a Good Plan & <br> Grow Your Business</h1>
-								<p>We have almost 35+ years of experience for <br>providing consulting services solutions</p>
-								<div class="btn-box">
-									<a href="#" class="cs-btn-one btn-gradient-color">Get a Quote</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="slide-item">
-				<div class="image-layer" data-background="images/bg/3.jpg"></div>
-				<div class="auto-container">
-					<div class="row clearfix">
-						<div class="col-xl-8 col-lg-12 col-md-12 content-column">
-							<div class="content-box">
-								<h1>Make a Good Plan & <br> Grow Your Business</h1>
-								<p>We have almost 35+ years of experience for <br>providing consulting services solutions</p>
-								<div class="btn-box">
-									<a href="#" class="cs-btn-one btn-gradient-color">Get a Quote</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<?php } ?>
 		</div>
 	</section>
 	<!-- Home Slider End -->

@@ -154,4 +154,154 @@ if(isset($_POST['picupdate'])){
 			header("Location:../profilesetup.php");
 		}
 }
+
+/* Add Slider */
+if(isset($_POST['add_slider'])){
+	
+	$allowed_ext=array("jpg","png","gif");
+	
+	$ext=strtolower(substr($_FILES['slider_pic']['name'],strpos($_FILES['slider_pic']['name'],'.')+1));
+	if(in_array($ext, $allowed_ext)===false){
+		$_SESSION['title'] = "Hata!";
+		$_SESSION['status'] = "Yüklemek istediğiniz resim JPG, PNG veya GIF formatında olmalıdır.";
+		$_SESSION['icon'] = "error";
+		header('Location:../add-slider.php');
+		exit();
+	}
+	if($_FILES['slider_pic']['size']>2097152){
+		$_SESSION['title'] = "Hata!";
+		$_SESSION['status'] = "Yüklemek istediğiniz resimin boyutu 2MB. üzerinde olmamalıdır.";
+		$_SESSION['icon'] = "error";
+		header('Location:../add-slider.php');
+		exit();
+	}else{
+		$uploads_dir='../../images/slider';
+		@$tmp_name=$_FILES['slider_pic']["tmp_name"];
+		@$name=$_FILES['slider_pic']["name"];
+		$name=preg_replace("/[^a-zA-Z0-9.]/", "", $name);
+		$benzersizsayi1=rand(20000,32000);
+		$benzersizsayi2=rand(20000,32000);
+		$benzersizad=$benzersizsayi1.$benzersizsayi2;
+		$refimgyol=substr($uploads_dir,6)."/".$benzersizad.$name;
+		@move_uploaded_file($tmp_name,"$uploads_dir/$benzersizad$name");
+
+		$add_image=$db->prepare("INSERT INTO slider SET
+		title_tr=:title_tr,
+		title_en=:title_en
+		pic_url=:pic");
+
+		$add_service=$add_image->execute(array(
+		"title_tr"  => trim($_POST["title_tr"]),
+		"title_en"  => trim($_POST["title_en"]),
+		'pic'    => $refimgyol));
+
+		if($add_service){
+			$_SESSION['title'] = "İşlem Başarılı";
+			$_SESSION['status'] = "Slider başarılı bir şekilde eklenmiştir.";
+			$_SESSION['icon'] = "success";
+			header("Location:../sliderlist.php");
+		}else{
+			$_SESSION['title'] = "Hata!";
+			$_SESSION['status'] = "Slider eklenirken bir hata oluştu. Daha sonra tekrar deneyin veya info@excess.web.tr adresine bildirin.";
+			$_SESSION['icon'] = "error";
+			header('Location:../sliderlist.php');
+		}
+	}
+}
+
+/* Slider Rank */
+if(isset($_POST["data"])){
+	parse_str($_POST["data"], $siralama);
+	$rank = $siralama["rank"];
+	foreach($rank as $key => $id){
+		
+		$query=$db->prepare("UPDATE slider SET slider_rank=:rank WHERE id=:id");
+		$update=$query->execute(array("rank" => $key, "id" => $id));
+	}
+}
+
+/* Slider Picture Update */
+if(isset($_POST['update_slider_pic'])){
+	
+	$slider_id=$_POST['slider_id'];
+	
+	$allowed_ext=array("jpg","png","gif");
+	
+	$ext=strtolower(substr($_FILES['slider_pic']['name'],strpos($_FILES['slider_pic']['name'],'.')+1));
+	if(in_array($ext, $allowed_ext)===false){
+		$_SESSION['title'] = "Hata!";
+		$_SESSION['status'] = "Yüklemek istediğiniz resim JPG, PNG veya GIF formatında olmalıdır.";
+		$_SESSION['icon'] = "error";
+		header("Location:../edit-slider.php?id=$slider_id");
+		exit();
+	}
+	if($_FILES['slider_pic']['size']>2097152){
+		$_SESSION['title'] = "Hata!";
+		$_SESSION['status'] = "Yüklemek istediğiniz resimin boyutu 2MB. üzerinde olmamalıdır.";
+		$_SESSION['icon'] = "error";
+		header("Location:../edit-slider.php?id=$slider_id");
+		exit();
+	}else{
+		$uploads_dir='../../images/slider';
+		@$tmp_name=$_FILES['slider_pic']["tmp_name"];
+		@$name=$_FILES['slider_pic']["name"];
+		$name=preg_replace("/[^a-zA-Z0-9.]/", "", $name);
+		$benzersizsayi1=rand(20000,32000);
+		$benzersizsayi2=rand(20000,32000);
+		$benzersizad=$benzersizsayi1.$benzersizsayi2;
+		$refimgyol=substr($uploads_dir,6)."/".$benzersizad.$name;
+		@move_uploaded_file($tmp_name,"$uploads_dir/$benzersizad$name");
+
+		$edit_slider_pic=$db->prepare("UPDATE slider SET
+		pic_url=:pic WHERE id={$slider_id}");
+
+		$updated=$edit_slider_pic->execute(array(
+		'pic'    => $refimgyol));
+		
+		$unlink=$_POST["slider_pic"];
+
+		if($updated){
+			unlink("../../$unlink");
+			$_SESSION['title'] = "İşlem Başarılı";
+			$_SESSION['status'] = "Slider resmi başarılı bir şekilde güncellenmiştir.";
+			$_SESSION['icon'] = "success";
+			header("Location:../edit-slider.php?id=$slider_id");
+		}else{
+			$_SESSION['title'] = "Hata!";
+			$_SESSION['status'] = "Slider resmi güncellenirken bir hata oluştu. Daha sonra tekrar deneyin veya info@excess.web.tr adresine bildirin.";
+			$_SESSION['icon'] = "error";
+			header("Location:../edit-slider.php?id=$slider_id");
+		}
+	}
+}
+
+/* Slider Content Update */
+if(isset($_POST['edit_slider'])){
+	
+	$slider_id=$_POST['slider_id'];
+	
+	$edit_slider=$db->prepare("UPDATE slider SET
+	title_tr=:title_tr,
+	title_en=:title_en,
+	text_tr=:text_tr,
+	text_en=:text_en WHERE id={$slider_id}");
+
+	$updated=$edit_slider->execute(array(
+	"title_tr"  => trim($_POST["title_tr"]),
+	"title_en"  => trim($_POST["title_en"]),
+	"text_tr"   => trim($_POST["text_tr"]),
+	"text_en"   => trim($_POST["text_en"])));
+
+	if($updated){
+		$_SESSION['title'] = "İşlem Başarılı";
+		$_SESSION['status'] = "Hizmet başarılı bir şekilde güncellenmiştir.";
+		$_SESSION['icon'] = "success";
+		header("Location:../edit-slider.php?id=$slider_id");
+	}else{
+		$_SESSION['title'] = "Hata!";
+		$_SESSION['status'] = "Hizmet güncellenirken bir hata oluştu. Daha sonra tekrar deneyin veya info@excess.web.tr adresine bildirin.";
+		$_SESSION['icon'] = "error";
+		header("Location:../edit-slider.php?id=$slider_id");
+	}
+}
 ?>
