@@ -2552,7 +2552,7 @@ select {
 }
 
 .section-title-left-part:after {
-  content: "\f180";
+  content: "\f118";
   font-family: Flaticon;
   position: absolute;
   top: 17px;

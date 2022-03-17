@@ -159,7 +159,7 @@ include("admin/assets/functions.php");
 							<span class="webexflaticon flaticon-man-2"></span>
 						</div>
 						<h2 class="counter">1450</h2>
-						<h5 class="title">Happy Customers</h5>
+						<h5 class="title">Mutlu İşletme</h5>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-6 col-xl-3">
@@ -168,16 +168,16 @@ include("admin/assets/functions.php");
 							<span class="webexflaticon flaticon-like-3"></span>
 						</div>
 						<h2 class="counter">1864</h2>
-						<h5 class="title">Peoples Likes</h5>
+						<h5 class="title">Beğeni</h5>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-6 col-xl-3">
 					<div class="funfact mrb-lg-30 mrb-60">
 						<div class="icon">
-							<span class="webexflaticon flaticon-trophy-1"></span>
+							<span class="webexflaticon flaticon-coffee-cup"></span>
 						</div>
 						<h2 class="counter">1280</h2>
-						<h5 class="title">Awards Achieved</h5>
+						<h5 class="title">Fincan Kahve</h5>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-6 col-xl-3">
@@ -185,8 +185,8 @@ include("admin/assets/functions.php");
 						<div class="icon">
 							<span class="webexflaticon flaticon-briefcase-1"></span>
 						</div>
-						<h2 class="counter">32</h2>
-						<h5 class="title">Experiences</h5>
+						<h2 class="counter">20</h2>
+						<h5 class="title">Yıllık Tecrübe</h5>
 					</div>
 				</div>
 			</div>
@@ -221,11 +221,11 @@ include("admin/assets/functions.php");
 					<div class="col-md-6 col-xl-3">
 						<div class="service-box">
 							<div class="service-icon">
-								<span class="webexflaticon flaticon-plan"></span>
+								<span class="webexflaticon flaticon-coding"></span>
 							</div>
 							<div class="service-content">
 								<div class="title">
-									<a href="#"><h3>Online Business</h3></a>
+									<a href="#"><h3>Web Yazılım</h3></a>
 								</div>
 								<div class="para">
 									<p>We always provide people a complete solution focused of any business.</p>
@@ -236,11 +236,11 @@ include("admin/assets/functions.php");
 					<div class="col-md-6 col-xl-3">
 						<div class="service-box">
 							<div class="service-icon">
-								<span class="webexflaticon flaticon-meeting"></span>
+								<span class="webexflaticon flaticon-diamond"></span>
 							</div>
 							<div class="service-content">
 								<div class="title">
-									<a href="#"><h3>Human Resource</h3></a>
+									<a href="#"><h3>Grafik Tasarım</h3></a>
 								</div>
 								<div class="para">
 									<p>We always provide people a complete solution focused of any business.</p>
@@ -255,7 +255,7 @@ include("admin/assets/functions.php");
 							</div>
 							<div class="service-content">
 								<div class="title">
-									<a href="#"><h3>Market Research</h3></a>
+									<a href="#"><h3>Sosyal Medya Yönetimi</h3></a>
 								</div>
 								<div class="para">
 									<p>We always provide people a complete solution focused of any business.</p>
@@ -266,71 +266,11 @@ include("admin/assets/functions.php");
 					<div class="col-md-6 col-xl-3">
 						<div class="service-box">
 							<div class="service-icon">
-								<span class="webexflaticon flaticon-benchmark"></span>
+								<span class="webexflaticon flaticon-video-player"></span>
 							</div>
 							<div class="service-content">
 								<div class="title">
-									<a href="#"><h3>Business Strategy</h3></a>
-								</div>
-								<div class="para">
-									<p>We always provide people a complete solution focused of any business.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-xl-3">
-						<div class="service-box">
-							<div class="service-icon">
-								<span class="webexflaticon flaticon-search-1"></span>
-							</div>
-							<div class="service-content">
-								<div class="title">
-									<a href="#"><h3>Project Managment</h3></a>
-								</div>
-								<div class="para">
-									<p>We always provide people a complete solution focused of any business.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-xl-3">
-						<div class="service-box">
-							<div class="service-icon">
-								<span class="webexflaticon flaticon-wallet"></span>
-							</div>
-							<div class="service-content">
-								<div class="title">
-									<a href="#"><h3>Money Management</h3></a>
-								</div>
-								<div class="para">
-									<p>We always provide people a complete solution focused of any business.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-xl-3">
-						<div class="service-box">
-							<div class="service-icon">
-								<span class="webexflaticon flaticon-profits"></span>
-							</div>
-							<div class="service-content">
-								<div class="title">
-									<a href="#"><h3>Online Marketing</h3></a>
-								</div>
-								<div class="para">
-									<p>We always provide people a complete solution focused of any business.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-xl-3">
-						<div class="service-box">
-							<div class="service-icon">
-								<span class="webexflaticon flaticon-medal-1"></span>
-							</div>
-							<div class="service-content">
-								<div class="title">
-									<a href="#"><h3>Business Insurance</h3></a>
+									<a href="#"><h3>Video Editing</h3></a>
 								</div>
 								<div class="para">
 									<p>We always provide people a complete solution focused of any business.</p>
@@ -343,174 +283,6 @@ include("admin/assets/functions.php");
 		</div>
 	</section>
 	<!-- Service Section End -->
-	
-	<!-- Team Section Titile Start -->
-	<section class="pdt-110 pdb-150 section-white-typo" data-background="images/bg/5.jpg" data-overlay-dark="8">
-		<div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-			<div class="container">
-				<div class="row">
-					<div class="col"></div>
-					<div class="col-lg-8 col-xl-6">
-						<div class="section-title-block">
-							<h5 class="text-primary-color anim-box-objects line-both-side mrb-15">Meet Our Team</h5>
-							<h2>We Have a Professional Consulting Team</h2>
-						</div>
-					</div>
-					<div class="col"></div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Team Section Titile End -->
-	
-	<!-- Team Section Start -->
-	<section class="pdt-0 pdb-210 pdb-md-110 minus-mrt-130 bg-pos-center-bottom" data-background="images/bg/abs-bg1.png">
-		<div class="section-content">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 col-lg-6 col-xl-3">
-						<div class="team-block mrb-30">
-							<div class="team-upper-part">
-								<img class="img-full" src="images/team/team01.jpg" alt="">
-							</div>
-							<div class="team-bottom-part">
-								<h4 class="team-title mrb-5"><a href="page-single-team.html">Jack Mehoff</a></h4>
-								<h6 class="designation">Engineer</h6>
-								<ul class="social-list vertical-style list-sm">
-									<li><a href="#"><i class="fab fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-6 col-xl-3">
-						<div class="team-block mrb-30">
-							<div class="team-upper-part">
-								<img class="img-full" src="images/team/team02.jpg" alt="">
-							</div>
-							<div class="team-bottom-part">
-								<h4 class="team-title mrb-5"><a href="page-single-team.html">Jack Mehoff</a></h4>
-								<h6 class="designation">Engineer</h6>
-								<ul class="social-list vertical-style list-sm">
-									<li><a href="#"><i class="fab fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-6 col-xl-3">
-						<div class="team-block mrb-30">
-							<div class="team-upper-part">
-								<img class="img-full" src="images/team/team03.jpg" alt="">
-							</div>
-							<div class="team-bottom-part">
-								<h4 class="team-title mrb-5"><a href="page-single-team.html">Jack Mehoff</a></h4>
-								<h6 class="designation">Engineer</h6>
-								<ul class="social-list vertical-style list-sm">
-									<li><a href="#"><i class="fab fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-6 col-xl-3">
-						<div class="team-block mrb-30">
-							<div class="team-upper-part">
-								<img class="img-full" src="images/team/team04.jpg" alt="">
-							</div>
-							<div class="team-bottom-part">
-								<h4 class="team-title mrb-5"><a href="page-single-team.html">Jack Mehoff</a></h4>
-								<h6 class="designation">Engineer</h6>
-								<ul class="social-list vertical-style list-sm">
-									<li><a href="#"><i class="fab fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-									<li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row align-items-center pdt-80">
-					<div class="col-md-12 col-xl-6">
-						<h5 class="mrb-15 text-primary-color sub-title-side-line">Professional Skills</h5>
-						<h2 class="mrb-30">We Help You to Grow <br><span class="f-weight-400">Your Business</span> Quickly</h2>
-						<p class="mrb-30">Distinctively exploit optimal alignments for intuitive. Quickly coordinate business applications through revolutionary cataly technologies rather than development optimal alignments for intuitive.</p>
-						<div class="skills mrb-lg-60">
-							<div class="skill-item">
-								<div class="skill-header">
-									<h6 class="skill-title">Business Consulting</h6>
-									<div class="skill-percentage">
-										<div class="count-box"><span class="count-text" data-speed="2100" data-stop="85">0</span>%</div>
-									</div>
-								</div>
-								<div class="skill-bar">
-									<div class="bar-inner">
-										<div class="bar progress-line" data-width="85"></div>
-									</div>
-								</div>
-							</div>
-							<div class="skill-item">
-								<div class="skill-header">
-									<h6 class="skill-title">Market Analysis</h6>
-									<div class="skill-percentage">
-										<div class="count-box"><span class="count-text" data-speed="2000" data-stop="96">0</span>%</div>
-									</div>
-								</div>
-								<div class="skill-bar">
-									<div class="bar-inner">
-										<div class="bar progress-line" data-width="96"></div>
-									</div>
-								</div>
-							</div>
-							<div class="skill-item">
-								<div class="skill-header">
-									<h6 class="skill-title">Money Management</h6>
-									<div class="skill-percentage">
-										<div class="count-box"><span class="count-text" data-speed="1900" data-stop="90">0</span>%</div>
-									</div>
-								</div>
-								<div class="skill-bar">
-									<div class="bar-inner">
-										<div class="bar progress-line" data-width="90"></div>
-									</div>
-								</div>
-							</div>
-							<div class="skill-item">
-								<div class="skill-header">
-									<h6 class="skill-title">Business Growth</h6>
-									<div class="skill-percentage">
-										<div class="count-box"><span class="count-text" data-speed="1800" data-stop="88">0</span>%</div>
-									</div>
-								</div>
-								<div class="skill-bar">
-									<div class="bar-inner">
-										<div class="bar progress-line" data-width="88"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-12 col-xl-6">
-						<div class="about-image-block">
-							<img class="img-full" src="images/about/ab3.jpg" alt="">
-							<div class="call-us-now">
-								<p class="call-us-title mrb-5 text-white">Call Us Now</p>
-								<h3 class="number mrt-0 text-white">+01 225 445</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Team Section End -->
 	
 	<!-- Divider Section Start -->
 	<section class="pdb-110" data-background="images/bg/3.jpg" data-overlay-dark="8">
@@ -792,88 +564,6 @@ include("admin/assets/functions.php");
 		</div>
 	</section>
 	<!-- News Section End -->
-	
-	<!-- Testimonials Section Start -->
-	<section class="request-a-call-back pdt-80 pdb-110 pdb-lg-70" data-background="images/bg/abs-bg7.png">
-		<div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-			<div class="container">
-				<div class="row">
-					<div class="col"></div>
-					<div class="col-lg-8">
-						<div class="title-box-center">
-							<h5 class="shadow-text">Reviews</h5>
-							<h5 class="sub-title-center text-primary-color line-top-center mrb-30">Testimonials</h5>
-							<h2 class="title">What People and Clients Think About Us?</h2>
-						</div>
-					</div>
-					<div class="col"></div>
-				</div>
-			</div>
-		</div>
-		<div class="section-content">
-			<div class="container">
-				<div class="row">
-					<div class="owl-carousel testimonial-items-2col mrb-lg-40">
-						<div class="testimonial-item">
-							<span class="quote-icon fas fa-quote-right"></span>
-							<div class="testimonial-thumb">
-								<img src="images/testimonials/testimonial-img1.jpg" alt="">
-							</div>
-							<h4 class="client-name">Aurther Maxwell</h4>
-							<h6 class="client-designation">CEO, Apple Inc.</h6>
-							<div class="testimonial-content">
-								<p class="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit oluptatibus blanditiis amet optio fugiat nisi est repellendus iusto quis harum laboriosam nostrum unde distinctio</p>
-								<ul class="star-rating">
-									<li><i class="webex-icon-star-full text-primary-color"></i></li>
-									<li><i class="webex-icon-star-full text-primary-color"></i></li>
-									<li><i class="webex-icon-star-full text-primary-color"></i></li>
-									<li><i class="webex-icon-star-half text-primary-color"></i></li>
-									<li><i class="webex-icon-star-empty text-primary-color"></i></li>
-								</ul>
-							</div>
-						</div>
-						<div class="testimonial-item">
-							<span class="quote-icon fas fa-quote-right"></span>
-							<div class="testimonial-thumb">
-								<img src="images/testimonials/testimonial-img2.jpg" alt="">
-							</div>
-							<h4 class="client-name">Aurther Maxwell</h4>
-							<h6 class="client-designation">CEO, Apple Inc.</h6>
-							<div class="testimonial-content">
-								<p class="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit oluptatibus blanditiis amet optio fugiat nisi est repellendus iusto quis harum laboriosam nostrum unde distinctio</p>
-								<ul class="star-rating">
-									<li><i class="webex-icon-star-full text-primary-color"></i></li>
-									<li><i class="webex-icon-star-full text-primary-color"></i></li>
-									<li><i class="webex-icon-star-full text-primary-color"></i></li>
-									<li><i class="webex-icon-star-half text-primary-color"></i></li>
-									<li><i class="webex-icon-star-empty text-primary-color"></i></li>
-								</ul>
-							</div>
-						</div>
-						<div class="testimonial-item">
-							<span class="quote-icon fas fa-quote-right"></span>
-							<div class="testimonial-thumb">
-								<img src="images/testimonials/testimonial-img3.jpg" alt="">
-							</div>
-							<h4 class="client-name">Aurther Maxwell</h4>
-							<h6 class="client-designation">CEO, Apple Inc.</h6>
-							<div class="testimonial-content">
-								<p class="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit oluptatibus blanditiis amet optio fugiat nisi est repellendus iusto quis harum laboriosam nostrum unde distinctio</p>
-								<ul class="star-rating">
-									<li><i class="webex-icon-star-full text-primary-color"></i></li>
-									<li><i class="webex-icon-star-full text-primary-color"></i></li>
-									<li><i class="webex-icon-star-full text-primary-color"></i></li>
-									<li><i class="webex-icon-star-half text-primary-color"></i></li>
-									<li><i class="webex-icon-star-empty text-primary-color"></i></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Testimonials Section End -->
 	
 	<!-- Footer Area Start -->
 	<?php include("assets/footer.php"); ?>
