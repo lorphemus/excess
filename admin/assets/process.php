@@ -135,7 +135,7 @@ if(isset($_POST['picupdate'])){
 
 		$update_prof=$db->prepare("UPDATE users SET
 		user_pic=:pic
-		WHERE user_id={$_POST['user_id']}");
+		WHERE id={$_POST['user_id']}");
 
 		$update=$update_prof->execute(array(
 		'pic'    =>$refimgyol));

@@ -107,7 +107,7 @@ $page = "profile";
 					<label>E-Mail</label>
 					<input type="email" class="form-control" name="user_mail" placeholder="E-Mail Adresiniz" value="<?php echo $get_user['user_mail']; ?>" required>
 				</div>
-				<input type="hidden" name="user_id" value="<?php echo $get_user['user_id']; ?>">
+				<input type="hidden" name="user_id" value="<?php echo $get_user['id']; ?>">
 				<input type="hidden" name="unlink" value="<?php echo $get_user['user_pic']; ?>">
 				
 				
